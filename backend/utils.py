@@ -24,14 +24,3 @@ def process_pdf(file_path):
     print(f"Done! Extracted {len(chunks)} chunks.")
     return chunks
 
-if __name__ == "__main__":
-    # Construct path to the PDF relative to the script's location
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    pdf_path = os.path.join(script_dir, "document.pdf")
-
-    if os.path.exists(pdf_path):
-        chunks = process_pdf(pdf_path)
-        for i, chunk in enumerate(chunks):
-            print(f"\n--- Chunk {i+1} ---\n{chunk}")
-    else:
-        print(f"Error: '{pdf_path}' not found. Please ensure 'document.pdf' is in the same directory as the script.")
