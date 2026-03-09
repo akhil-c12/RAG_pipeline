@@ -31,6 +31,4 @@ Answer:
 )
 
     return response.json()["choices"][0]["message"]["content"]
-
-print(rag_chat("What is the summary of the document?", retrieve_chunks))
     

@@ -8,7 +8,7 @@ def get_vector_store():
     if vector_store is None:
         if not os.path.exists("vector_store"):
             raise FileNotFoundError("Vector store not found. Please run the embedding script first.")
-        return load_vector_store()
+        return FileNotFoundError("Vector store not found. Please run the embedding script first.")
     vector_store=load_vector_store()
     return vector_store
 
