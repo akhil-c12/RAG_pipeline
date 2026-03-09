@@ -11,12 +11,12 @@ if not os.path.exists(PDF_PATH):
     exit()
 
 chunks = process_pdf(PDF_PATH)
-print(f"✅ {len(chunks)} chunks ready\n")
+print(f" {len(chunks)} chunks ready\n")
 
 # Step 3: Create Vector Store
 print(" Embedding and saving to vector store...")
 create_vector_store(chunks, filename="test.pdf")
-print("✅ Vector store created\n")
+print("Vector store created\n")
 
 #  Step 4: Retrieve
 query = "Give the Summary of document" 
