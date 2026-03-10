@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG AI Assistant</title>
+<link rel="style-sheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>RAG AI Assistant</h1>
+
+<div class="card">
+<h2>Upload PDF</h2>
+
+<label for="pdfFile">Select PDF file:</label>
+<input type="file" id="pdfFile" accept=".pdf">
+<button onclick="uploadPDF()">Upload</button>
+
+<p id="uploadStatus"></p>
+
+</div>
+
+<div class="card">
+
+<h2>Ask Question</h2>
+
+<input type="text" id="queryInput" placeholder="Ask something about your document...">
+
+<button onclick="sendQuery()">Ask</button>
+
+<div id="responseBox"></div>
+
+</div>
+
+<div class="card">
+
+<h2>Uploaded Documents</h2>
+
+<button onclick="loadDocuments()">Refresh</button>
+
+<ul id="docList"></ul>
+
+</div>
+
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
